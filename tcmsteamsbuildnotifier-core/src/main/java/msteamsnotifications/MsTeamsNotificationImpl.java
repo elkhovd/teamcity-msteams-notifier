@@ -162,7 +162,7 @@ public class MsTeamsNotificationImpl implements MsTeamsNotification {
 
             Loggers.SERVER.info("MsTeamsNotificationListener :: Body message will be " + bodyParam);
 
-            httppost.setEntity(new StringEntity(bodyParam));
+            httppost.setEntity(new StringEntity(bodyParam, "UTF-8"));
             httppost.setHeader("Content-Type", CONTENT_TYPE);
 
             try {
